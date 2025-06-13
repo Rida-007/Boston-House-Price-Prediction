@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Boston Housing Price Prediction</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <h2>BOSTON HOUSING PRICE PREDICTION</h2>
+        <form action="/predict" method="post">
 
+            <div class="form-group">
+            <label>CRIM:</label><br>
+            <input type="text" name="CRIM"><br>
+            </div>
+
+            <div class="form-group">
+            <label>ZN:</label><br>
+            <input type="text" name="ZN"><br>
+            </div>
+
+            <div class="form-group">
+            <label>INDUS:</label><br>
+            <input type="text" name="INDUS"><br>
+            </div>
+
+            <div class="form-group">
+            <label>CHAS:</label><br>
+            <input type="text" name="CHAS"><br>
+            </div>
+
+            <div class="form-group">
+            <label>NOX:</label><br>
+            <input type="text" name="NOX"><br>
+            </div>
+
+            <div class="form-group">
+            <label>RM:</label><br>
+            <input type="text" name="RM"><br>
+            </div>
+
+            <div class="form-group">
+            <label>AGE:</label><br>
+            <input type="text" name="AGE"><br>
+            </div>
+
+            <div class="form-group">
+            <label>DIS:</label><br>
+            <input type="text" name="DIS"><br>
+            </div>
+
+            <div class="form-group">
+            <label>RAD:</label><br>
+            <input type="text" name="RAD"><br>
+            </div>
+
+            <div class="form-group">
+            <label>TAX:</label><br>
+            <input type="text" name="TAX"><br>
+            </div>
+
+            <div class="form-group">
+            <label>PTRATIO:</label><br>
+            <input type="text" name="PTRATIO"><br>
+            </div>
+
+            <div class="form-group">
+            <label>B:</label><br>
+            <input type="text" name="B"><br>
+            </div>
+
+            <div class="form-group">
+            <label>LSTAT:</label><br>
+            <input type="text" name="LSTAT"><br>
+            </div>
+
+            <br>
+            <input class="submit-btn" type="submit" value="Predict">
+
+
+        </form>
+        {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+        {% endif %}
+    </body>
+</html>
